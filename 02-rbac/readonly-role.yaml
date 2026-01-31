@@ -1,0 +1,8 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: lab-readonly
+rules:
+  - apiGroups: ["", "apps", "batch", "networking.k8s.io"]
+    resources: ["pods","services","endpoints","configmaps","secrets","deployments","replicasets","jobs","cronjobs","ingresses"]
+    verbs: ["get","list","watch"]

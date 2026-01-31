@@ -1,0 +1,12 @@
+apiVersion: vpcresources.k8s.aws/v1beta1
+kind: SecurityGroupPolicy
+metadata:
+  name: s3-reader-sg
+  namespace: lab-iam
+spec:
+  podSelector:
+    matchLabels:
+      app: s3-reader
+  securityGroups:
+    groupIds:
+      - sg-xxxxxxxxxxxxxxxxx

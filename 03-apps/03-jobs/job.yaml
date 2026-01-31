@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: one-shot
+  namespace: lab-jobs
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: curl
+          image: curlimages/curl:8.10.1
+          args: ["-sS", "http://frontend.lab-app.svc.cluster.local"]
+  backoffLimit: 2
