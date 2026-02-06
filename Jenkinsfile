@@ -27,7 +27,7 @@ spec:
     - name: kaniko-docker-config
       mountPath: /kaniko/.docker
   - name: kaniko
-    image: gcr.io/kaniko-project/executor:v1.23.2
+    image: gcr.io/kaniko-project/executor:debug-v1.23.2
     command: ["/busybox/sh","-c"]
     args: ["sleep 3600"]
     tty: true
