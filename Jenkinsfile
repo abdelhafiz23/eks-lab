@@ -138,6 +138,8 @@ EOF
             : "${K8S_DEPLOYMENT_NAME:?K8S_DEPLOYMENT_NAME missing}"
             : "${K8S_CONTAINER_NAME:?K8S_CONTAINER_NAME missing}"
 
+            echo "Last Step !!! edit image yay IoI"
+
             kubectl -n "${K8S_DEPLOYMENT_NAMESPACE}" set image deployment/"${K8S_DEPLOYMENT_NAME}" \
               "${K8S_CONTAINER_NAME}"="${IMAGE_URI}"
 
