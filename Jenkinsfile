@@ -118,6 +118,7 @@ EOF
                 --dockerfile=src/Dockerfile \
                 --destination=${imageRepo}:${tagSha} \
                 --destination=${imageRepo}:latest \
+                --force \
                 --cache=true
             """
 
