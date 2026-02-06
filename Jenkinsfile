@@ -9,6 +9,8 @@ kind: Pod
 spec:
   restartPolicy: Never
   serviceAccountName: jenkins
+  securityContext:
+    fsGroup: 1000
   volumes:
   - name: kaniko-docker-config
     emptyDir: {}
@@ -36,6 +38,9 @@ spec:
       mountPath: /kaniko/.docker
   - name: kubectl
     image: bitnami/kubectl:latest
+    securityContext:
+      runAsUser: 1000
+      runAsGroup: 1000
     command: ["/bin/sh","-c"]
     args: ["sleep 3600"]
     tty: true
