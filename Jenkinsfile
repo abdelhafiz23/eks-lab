@@ -47,11 +47,11 @@ spec:
 
   environment {
     // You can also define these in the Jenkins job config instead of here.
-    // AWS_REGION = "eu-west-1"
-    // ECR_REPO = "ecr-foundation"
-    // K8S_DEPLOYMENT_NAMESPACE = "jenkins"
-    // K8S_DEPLOYMENT_NAME = "demo-app"
-    // K8S_CONTAINER_NAME = "app"
+    AWS_REGION = "eu-west-1"
+    ECR_REPO = "ecr-foundation"
+    K8S_DEPLOYMENT_NAMESPACE = "jenkins"
+    K8S_DEPLOYMENT_NAME = "demo-app"
+    K8S_CONTAINER_NAME = "app"
   }
 
   stages {
