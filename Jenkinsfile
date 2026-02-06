@@ -19,7 +19,7 @@ spec:
     args: ["sleep 3600"]
     tty: true
   - name: awscli
-    image: amazon/aws-cli:2.15.57
+    image: amazon/aws-cli:latest
     command: ["/bin/sh","-c"]
     args: ["sleep 3600"]
     tty: true
@@ -35,7 +35,7 @@ spec:
     - name: kaniko-docker-config
       mountPath: /kaniko/.docker
   - name: kubectl
-    image: bitnami/kubectl:1.30.4
+    image: bitnami/kubectl:latest
     command: ["/bin/sh","-c"]
     args: ["sleep 3600"]
     tty: true
